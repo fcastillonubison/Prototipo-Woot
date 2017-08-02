@@ -1,0 +1,29 @@
+{
+	"version": "1.0",
+	"description": "Available App Info",
+	"hostname": "Test Server",
+	"message": "Sample message",
+	"messageVersion": 1,
+	"appList": [
+		{
+			"id": "b2b_login",
+			"name": "PrototipoWoot",
+			"description": "B2B",
+			"url": "B2B_LOGIN_4f962090aaa949edaf3830abad8989dc",
+			"version": "1.0.0",
+			"installMessage": "",
+			"minSize": "",
+			"maxSize": "",
+			"ajaxURL": "http://nubisonlab.cl:1580/wootb2b/B2B_LOGIN_4f962090aaa949edaf3830abad8989dc/",
+			"type": "manifest",
+			"template": "<table style=\"background-color:#222; padding-top:0px;padding-bottom:12px;width:100%;padding-top:12px\">  <tr>   <td style=\"width:64px;\">             <img src=\"data:image/png;base64,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\"/>   </td>   <td>    <p style=\"font-size: 20px; padding-left:20px; color:#fff; font-family:arial; margin-bottom:0px;\">{name}</p>    <p style=\"font-size: 14px; padding-left:20px; color:#fff; font-family:arial; margin-top:0px;\">{desc}</p>   </td>  </tr> </table> ",
+			"options": {
+				"iOSStatusBar": {
+					"statusBarOverlaysWebView": 1,
+					"statusBarTextWhite": 0,
+					"statusBarBackgroundHexColor": "#FFF"
+				}
+			}
+		}	
+]
+}

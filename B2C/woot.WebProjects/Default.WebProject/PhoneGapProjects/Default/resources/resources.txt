@@ -1,0 +1,37 @@
+{
+	"_id": "2734544",
+	"_icon": "",
+	"_ssL": "",
+	"_ssP": "",
+	"_ssA9": "",
+	"_initialUxComponent": "B2C_LOGIN",
+	"_componentLastUpdated": "31/07/2017 03:34:58 73 pm",
+	"_ajaxUrl": "http://nubisonlab.cl:1580/woot",
+	"_additionalFiles": "img\\accrual-qr-code.png\nimg\\iStock-466468972.jpg\nimg\\rest1.jpg\nimg\\rest2.jpg\nimg\\rest3.jpg\nimg\\rest4.jpg\nimg\\rest5.jpg\nimg\\rest6.jpg\nimg\\woot-icon.png\nimg\\woot-logo.png",
+	"_userName": "wtwx6irfQI388l610MfHcA3dx88wwCfU",
+	"_pw": "nEUmwR92tRwv6SDFKfexhg==",
+	"_token": "",
+	"timeout": {
+		"phoneGapBuild": "<default>",
+		"phoneGapBuildLogin": "<default>",
+		"getAppIcon": "<default>"
+	},
+	"apperian": {
+		"enableOptions": false,
+		"loginName": "osLnGM4pUcQ=",
+		"password": "c5JMXi9Y+Ko=",
+		"serverURL": "https://easesvc.apperian.com/ease.interface.php"
+	},
+	"backupConfigFile": true,
+	"useImageMagick": true,
+	"indexHTMLMetaTags": "",
+	"genAppZipFile": false,
+	"zipFileLocation": "",
+	"buildTarget": "Phonegap Build",
+	"_androidBuildFlag": true,
+	"_iOSBuildFlag": false,
+	"_windowsBuildFlag": false,
+	"launchAppManager": true,
+	"_sqlitedbdefined": false,
+	"cliProjectFolder": ""
+}
