@@ -1,4 +1,4 @@
-A5SaveTimeStamp:20170804175053337
+A5SaveTimeStamp:20170807122337531
 css:iOS7
 cssIcon:font-awesome
 subComponent:B2C_MAIN.a5wcmp
@@ -10,4 +10,4 @@ copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\D
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\woot-logo.png}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\iStock-466468972.jpg}
 subComponent:B2C_MAIN
-precomputedUXComponent: {functionName: 'PRECOMPUTEDUX_0df0f948953f4a04aa0636c3b3756022_B2C_MAIN', uxname: 'B2C_MAIN', alias: '{alias}_B2C_MAIN_121717IASQ'}
+precomputedUXComponent: {functionName: 'PRECOMPUTEDUX_85f9c2ac574548989349f7b6bb10334d_B2C_MAIN', uxname: 'B2C_MAIN', alias: '{alias}_B2C_MAIN_114330BJFG'}
