@@ -3193,4 +3193,299 @@
 <target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_11008\temphttp___nubisonlab_cl___1580\wootb2b">
 <timestamp=CTODT('02/08/2017 11:53:17 07 am')>
 >
+<[640]<type="calendaricons">
+<name="calendaricons">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:24:07 57 am')>
+>
+<[641]<type="WebComponent">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\b2b_login.a5wcmp}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 80 am')>
+>
+<[642]<type="WebComponent">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\b2b_main.a5wcmp}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 38 am')>
+>
+<[643]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\bootstrap.min.css}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 88 am')>
+>
+<[644]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\materialize.min.css}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 92 am')>
+>
+<[645]<type="css">
+<name="a5system">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 51 am')>
+>
+<[646]<type="css">
+<name="ios7">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 69 am')>
+>
+<[647]<type="cssIcon">
+<name="font-awesome">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 79 am')>
+>
+<[648]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\project.securitysettings}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 80 am')>
+>
+<[649]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\istock-466468972.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 81 am')>
+>
+<[650]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\js\materialize.min.js}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 84 am')>
+>
+<[651]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\nopic.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 81 am')>
+>
+<[652]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\woot-logo.png}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 84 am')>
+>
+<[653]<type="A5WPage">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\index.a5w}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 72 am')>
+>
+<[654]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.css}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 88 am')>
+>
+<[655]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\css\font-awesome.min.css}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 89 am')>
+>
+<[656]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\flickity.css}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 91 am')>
+>
+<[657]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\style.css}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:58 92 am')>
+>
+<[658]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\accrual-qr-code.png}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 25 am')>
+>
+<[659]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.eot}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 26 am')>
+>
+<[660]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.svg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 26 am')>
+>
+<[661]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 26 am')>
+>
+<[662]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff2}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 27 am')>
+>
+<[663]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome-webfont.woff}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 27 am')>
+>
+<[664]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\cssicons\font-awesome\fonts\fontawesome.otf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 27 am')>
+>
+<[665]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\a5_ios7icons.eot}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 27 am')>
+>
+<[666]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\a5_ios7icons.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 28 am')>
+>
+<[667]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\a5_ios7icons.woff}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 28 am')>
+>
+<[668]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\ios7icons.woff}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 28 am')>
+>
+<[669]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\spinlistover.png}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 28 am')>
+>
+<[670]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\style.dat}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 29 am')>
+>
+<[671]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\style.json}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 29 am')>
+>
+<[672]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\style.js}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 29 am')>
+>
+<[673]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\css\ios7\style.sass}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 29 am')>
+>
+<[674]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-bold.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 31 am')>
+>
+<[675]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-bolditalic.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 32 am')>
+>
+<[676]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-italic.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 36 am')>
+>
+<[677]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-light.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 39 am')>
+>
+<[678]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-lightitalic.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 42 am')>
+>
+<[679]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-regular.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 44 am')>
+>
+<[680]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-semibold.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 46 am')>
+>
+<[681]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-semibolditalic.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 48 am')>
+>
+<[682]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-thin.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 51 am')>
+>
+<[683]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\fonts\josefinsans-thinitalic.ttf}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 53 am')>
+>
+<[684]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\accrual-qr-code.png}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 55 am')>
+>
+<[685]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\camera.png}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 11:58:32 81 am')>
+>
+<[686]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\nopic.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 59 am')>
+>
+<[687]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\rest1.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 61 am')>
+>
+<[688]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\rest2.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 63 am')>
+>
+<[689]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\rest3.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 65 am')>
+>
+<[690]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\rest4.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 67 am')>
+>
+<[691]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\rest5.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 70 am')>
+>
+<[692]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\rest6.jpg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 71 am')>
+>
+<[693]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\woot-icon.png}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 71 am')>
+>
+<[694]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\woot-icon.svg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 73 am')>
+>
+<[695]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\woot-logo.png}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 76 am')>
+>
+<[696]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\img\woot-logo.svg}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 78 am')>
+>
+<[697]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\js\flickity.pkgd.min.js}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 83 am')>
+>
+<[698]<type="file">
+<name="{c:\users\desarrollador\documents\prototipo woot\b2b\woot.webprojects\default.webproject\projectproperties.projectproperties}">
+<target_folder="c:\users\desarrollador\appdata\local\temp\alphaanywhere\p_2900\temphttp___nubisonlab_cl___1580\wootb2b">
+<timestamp=CTODT('21/08/2017 09:25:59 84 am')>
+>
 >

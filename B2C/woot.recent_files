@@ -1,0 +1,2 @@
+REST GET con http_get|$a5_play_script
+REST POST con BODY|$a5_play_script

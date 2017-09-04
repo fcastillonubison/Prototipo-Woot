@@ -1,13 +1,12 @@
-A5SaveTimeStamp:20170807122337531
+A5SaveTimeStamp:20170831170623352
 css:iOS7
 cssIcon:font-awesome
 subComponent:B2C_MAIN.a5wcmp
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\js\materialize.min.js}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\js\flickity.pkgd.min.js}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\css\bootstrap.min.css}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\css\materialize.min.css}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\css\flickity.css}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\woot-logo.png}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\iStock-466468972.jpg}
 subComponent:B2C_MAIN
-precomputedUXComponent: {functionName: 'PRECOMPUTEDUX_85f9c2ac574548989349f7b6bb10334d_B2C_MAIN', uxname: 'B2C_MAIN', alias: '{alias}_B2C_MAIN_114330BJFG'}
+precomputedUXComponent: {functionName: 'PRECOMPUTEDUX_3856dddb943c4489af517fc56c7988c8_B2C_MAIN', uxname: 'B2C_MAIN', alias: '{alias}_B2C_MAIN_17517EADX'}

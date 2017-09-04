@@ -1,14 +1,20 @@
-A5SaveTimeStamp:20170807132559368
+A5SaveTimeStamp:20170904145748196
 css:iOS7
 cssIcon:font-awesome
+subComponent:B2C_MAIN_PREMIOS_TIENDAS.a5wcmp
+subComponent:B2C_MAIN_PREMIOS_SERVICIOS.a5wcmp
+subComponent:B2C_MAIN_PREMIOS_DEPORTEYRELAX.a5wcmp
+subComponent:B2C_MAIN_PREMIOS_VIAJESYTURISMO.a5wcmp
+subComponent:B2C_MAIN_PREMIOS_TRANSPORTE.a5wcmp
+subComponent:B2C_MAIN_PREMIOS_VIDANOCTURNA.a5wcmp
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\iStock-466468972.jpg}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\rest1.jpg}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\rest2.jpg}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\rest3.jpg}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\rest4.jpg}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\rest5.jpg}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\rest6.jpg}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\noPic.jpg}
-copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\accrual-qr-code.png}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\woot-icon-white.png}
+copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\accrual-qr-code.png}
 copyfile:{C:\Users\Desarrollador\Documents\Prototipo Woot\B2C\woot.WebProjects\Default.WebProject\img\woot-icon.png}
+subComponent:B2C_MAIN_PREMIOS_TIENDAS
+subComponent:B2C_MAIN_PREMIOS_SERVICIOS
+subComponent:B2C_MAIN_PREMIOS_DEPORTEYRELAX
+subComponent:B2C_MAIN_PREMIOS_VIAJESYTURISMO
+subComponent:B2C_MAIN_PREMIOS_TRANSPORTE
+subComponent:B2C_MAIN_PREMIOS_VIDANOCTURNA

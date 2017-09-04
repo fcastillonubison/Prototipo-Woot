@@ -37,6 +37,8 @@ html { -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-user-select: none; -m
 .A5ContainerAlignLeft {padding: 4px; margin-right:auto;text-align: left;} 
 .A5ContainerAlignRight {padding: 4px; margin-left:auto;text-align: right;}
 
+.A5ContainerAlignCenter > .A5CWLayout, .A5ContainerAlignLeft > .A5CWLayout, .A5ContainerAlignRight > .A5CWLayout, .A5ContainerAlignCenter > .A5container, .A5ContainerAlignLeft > .A5container, .A5ContainerAlignRight > .A5container  {display: inline-block; float: none;}
+
 
 
 
@@ -75,11 +77,12 @@ html { -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-user-select: none; -m
 
 </style>
 
-<link rel="stylesheet" type="text/css" href="css/iOS7/style.css">
+<link rel="stylesheet" type="text/css" href="css/iOS7/style.css?69">
+<link rel="stylesheet" type="text/css" href="css/_sharedStyles/style.css?69">
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="css/flickity.css">
 <link rel="stylesheet" type="text/css" href="css/CSSIcons/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/CSSIcons/font-awesome/fonts/fontawesome-webfont.eot">
 <link rel="stylesheet" type="text/css" href="css/CSSIcons/font-awesome/fonts/fontawesome-webfont.svg">
@@ -97,7 +100,7 @@ html { -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-user-select: none; -m
   width: 100%;
   height: 100%;
   background: #fff;
-  z-index: 99999; }
+  z-index: 1; }
 #loading {
   position: relative;
   top: 50%;
@@ -269,13 +272,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 <script type="text/javascript" src="javascript/a5.js"></script>
 <script type="text/javascript" src="javascript/a5_url.js"></script>
 <script type="text/javascript" src="css/iOS7/style.js"></script>
-<script type="text/javascript" src="javascript/A5jQueryWithUI.js"></script>
+<script type="text/javascript" src="javascript/A5jQuery.js"></script>
 <script>
 	if(typeof jQuery != 'undefined') jQuery.noConflict();
 </script>
 <script type="text/javascript" src="__precomputedUXComponents.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="_phoneGapSettings.js"></script>
 
 <title></title>
@@ -285,6 +288,15 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 <input type="hidden" value="" id="DLG1.PARAMETERBUCKET"/>
 <input type="file" style="position:absolute; top:-1000px;visibility:hidden;" accept="image/*" id="DLG1._GETPHOTO"/><input type="file" style="position:absolute; top:-1000px;visibility:hidden;" name="files[]" multiple = "" id="DLG1._GETFILEMULTI"/><input type="file" style="position:absolute; top:-1000px;visibility:hidden;" name="files[]" id="DLG1._GETFILE"/>
 <script type="text/javascript" language="javascript">
+
+window.onerror = function(msg,source,line,column,err) { 
+	var _stack = '';
+	if(typeof err != 'undefined' && typeof err != null && typeof err.stack != 'undefined') _stack = err.stack;
+	var message = 'Message: ' + msg	+ '\nSource: ' + source + '\nLine: : ' + line + '\nColumn: ' + column + '\n\nStack:\n ' + _stack;
+	alert(message);
+	console.log(message);
+	DLG1_DlgObj.__lastError = message;
+};
 
 /*
 Copyright (c) 2001, 2017 Alpha Software Corporation
@@ -306,7 +318,7 @@ html='<div class="A5ControlBarItem" style="'+$if(s.size!='','A5CONTROLBARITEMSIZ
 s.template=html;},event:function(type,name,value,item,ele,e){if(type=='down'){var id=ele.id;var pcn=item.settings.pressedClassName;if(pcn!='')$acn(ele,pcn);if(item.settings.pressedIcon!=''){A5.u.icon.update($(ele.id+'.ICON'),item.settings.pressedIcon);A5.buttons._p[id]={c:pcn,i:item.settings.icon};}else A5.buttons._p[id]=pcn;}
 if(type=='click'){var curV=A5.u.object.get(this.data,item.bind.value);if(item.settings.type=='multi-state'){curV++;var d=A5.u.object.get(this.data,item.bind.data);if(curV>=d.length)curV=0;this.update(item.bind.value,curV);}else{this.update(item.bind.value,!curV);}}
 if(item.actions[type]){var data={item:{name:name,value:value,def:item},element:ele,event:e}
-this.action(item.actions[type],data);}}},'button-list':{initialize:function(name,id,s,theme){$u.o.assign(s,{size:'',settings:{theme:theme,allowNullSelection:false,multiple:false,className:'',nullSelectionClassName:'',button:{keepPressed:true}},actions:{},bind:{data:'',value:'',show:''},autoHideDisclosure:'auto'},true);A5.themes.assign(s.settings,s.settings.theme,'buttonList');var sStr=JSON.stringify(s.settings);sStr=sStr.replace(/\{/g,'\\{');sStr=sStr.replace(/\}/g,'\\}');sStr=sStr.replace(/:/g,'\\:');html='{A5.buttonLists.html(\''+id+'\','+sStr+','+s.bind.data+','+$if(s.settings.button.keepPressed,s.bind.value,'\'\'')+',\'a5-item="'+name+'" a5-value="\\{index\\}"\')}';var cStyle='';if(s.size=='')cStyle=' style="display: inline-block;"';if(s.settings.nullSelectionClassName!=''){html='<div class="'+s.settings.className+'{*if ('+s.bind.value+').toString() == \'\'}'+s.settings.nullSelectionClassName+'{*endif}"'+cStyle+'>'+html+'</div>';}else{html='<div class="'+s.settings.className+'"'+cStyle+'>'+html+'</div>';}
+this.action(item.actions[type],data);}}},'button-list':{initialize:function(name,id,s,theme){$u.o.assign(s,{size:'',settings:{theme:theme,allowNullSelection:false,multiple:false,className:'',nullSelectionClassName:'',button:{keepPressed:true}},actions:{},bind:{data:'',value:'',show:''},autoHideDisclosure:'auto'},true);var ts={};A5.themes.assign(ts,s.settings.theme,'buttonList');$u.o.assign(s.settings,ts,true);var sStr=JSON.stringify(s.settings);sStr=sStr.replace(/\{/g,'\\{');sStr=sStr.replace(/\}/g,'\\}');sStr=sStr.replace(/:/g,'\\:');html='{A5.buttonLists.html(\''+id+'\','+sStr+','+s.bind.data+','+$if(s.settings.button.keepPressed,s.bind.value,'\'\'')+',\'a5-item="'+name+'" a5-value="\\{index\\}"\')}';var cStyle='';if(s.size=='')cStyle=' style="display: inline-block;"';if(s.settings.nullSelectionClassName!=''){html='<div class="'+s.settings.className+'{*if ('+s.bind.value+').toString() == \'\'}'+s.settings.nullSelectionClassName+'{*endif}"'+cStyle+'>'+html+'</div>';}else{html='<div class="'+s.settings.className+'"'+cStyle+'>'+html+'</div>';}
 html='<div class="A5ControlBarItem" style="'+$if(s.size!='','A5CONTROLBARITEMSIZE: '+s.size+';','')+'">'+html+'</div>';if(s.bind.show!=''){html='{*if '+s.bind.show+'}'+html+'{*endif}';}
 s.template=html;},event:function(type,name,value,item,ele,e){if(type=='down'){var id=ele.id;var pcn=item.settings.button.pressedClassName;if(pcn!=''){$acn(ele,pcn);A5.buttons._p[id]=pcn;}}
 if(type=='click'){var d=A5.u.object.get(this.data,item.bind.data);var v=d[Number(value)];if(v){if(typeof v=='object'){v=v.value;}
@@ -319,7 +331,7 @@ var html='{*if [temp].state.disclosure.shown && [temp].state.disclosure.name == 
 s.template=html;},event:function(type,name,value,item,ele,e){if(type=='down'){var id=ele.id;var pcn=item.settings.pressedClassName;if(pcn!='')$acn(ele,pcn);if(item.settings.pressedIcon!=''){A5.u.icon.update($(ele.id+'.ICON'),item.settings.pressedIcon);A5.buttons._p[id]={c:pcn,i:item.settings.icon};}else A5.buttons._p[id]=pcn;}
 if(type=='click'){if(this._d.shown)var html=A5.buttons.html(ele.id,item.settings.hide,'a5-item="'+name+'"','',true);else var html=A5.buttons.html(ele.id,item.settings.show,'a5-item="'+name+'"','',true);var pEle=ele.parentNode;pEle.innerHTML=A5.u.template.expand(this.data,html);}
 if(item.actions[type]){var data={item:{name:name,value:value,def:item},element:ele,event:e}
-this.action(item.actions[type],data);}}},'edit':{initialize:function(name,id,s,theme){$u.o.assign(s,{size:'',update:'default',actions:{},settings:{theme:theme,style:'',watermark:{text:'',className:''}},bind:{value:'',show:''}},true);A5.themes.assign(s.settings,s.settings.theme,'edit');if(s.size!='')s.settings.style='A5CONTROLBARITEMSIZE: 100%;'+s.settings.style;s.settings.style='display: inline-block; overflow: hidden;'+s.settings.style;var wm=s.settings.watermark.text;if(wm=='')wm='&nbsp;';var html='{*if '+s.bind.value+' != \'\'}<div id="'+id+'" a5-item="'+name+'" class="'+s.settings.className+'" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; '+s.settings.style+'{*if [temp].state.edit.shown && [temp].state.edit.item == \''+name+'\'}visibility: hidden;{*endif}">{'+s.bind.value+'}</div>{*else}<div id="'+id+'" a5-item="'+name+'" class="'+s.settings.className+' '+s.settings.watermark.className+'" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; '+s.settings.style+'{*if [temp].state.edit.shown && [temp].state.edit.item == \''+name+'\'}visibility: hidden;{*endif}"><escape<'+wm+'>></div>{*endif}';html='<div class="A5ControlBarItem" style="'+$if(s.size!='','A5CONTROLBARITEMSIZE: '+s.size+';','')+'; text-align: left;">'+html+'</div>';if(s.bind.show!=''){html='{*if '+s.bind.show+'}'+html+'{*endif}';}
+this.action(item.actions[type],data);}}},'edit':{initialize:function(name,id,s,theme){$u.o.assign(s,{size:'',update:'default',actions:{},settings:{theme:theme,style:'',watermark:{text:'',className:''}},bind:{value:'',show:''}},true);var ts={};A5.themes.assign(ts,s.settings.theme,'edit');$u.o.assign(s.settings,ts,true);if(s.size!='')s.settings.style='A5CONTROLBARITEMSIZE: 100%;'+s.settings.style;s.settings.style='display: inline-block; overflow: hidden;'+s.settings.style;var wm=s.settings.watermark.text;if(wm=='')wm='&nbsp;';var html='{*if '+s.bind.value+' != \'\'}<div id="'+id+'" a5-item="'+name+'" class="'+s.settings.className+'" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; '+s.settings.style+'{*if [temp].state.edit.shown && [temp].state.edit.item == \''+name+'\'}visibility: hidden;{*endif}">{'+s.bind.value+'}</div>{*else}<div id="'+id+'" a5-item="'+name+'" class="'+s.settings.className+' '+s.settings.watermark.className+'" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; '+s.settings.style+'{*if [temp].state.edit.shown && [temp].state.edit.item == \''+name+'\'}visibility: hidden;{*endif}"><escape<'+wm+'>></div>{*endif}';html='<div class="A5ControlBarItem" style="'+$if(s.size!='','A5CONTROLBARITEMSIZE: '+s.size+';','')+'; text-align: left;">'+html+'</div>';if(s.bind.show!=''){html='{*if '+s.bind.show+'}'+html+'{*endif}';}
 s.template=html;},event:function(type,name,value,item,ele,e){if(item.actions[type]){var data={item:{name:name,value:value,def:item},element:ele,event:e}
 this.action(item.actions[type],data);}}}},_:{lDefs:{type:'default',className:'',style:'',bind:{show:''},before:{items:[]},middle:{items:[]},after:{items:[]}},initDone:false,init:function(){if(!A5.controlBar._.initDone){A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarLine','position: relative; text-align: center;');A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarLineCust','position: relative;');A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarLineBefore','text-align: left;');A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarLineAfter','text-align: right;');A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarItem','display: inline-block;');A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarLineContentBefore','position: absolute; top: 0px; left: 0px;');A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarLineContentAfter','position: absolute; top: 0px; right: 0px;');A5.u.css.setSelector('.A5ControlBarHorz .A5ControlBarLineBefore .A5ControlBarLineContentBefore, .A5ControlBarHorz .A5ControlBarLineAfter .A5ControlBarLineContentAfter','position: static;');A5.u.css.setSelector('.A5ControlBarCollapse .A5ControlBarHorz .A5ControlBarLine > div','position: static; display: inline;');A5.u.css.setSelector('.A5ControlBarCollapse .A5ControlBarHorz .A5ControlBarLine','text-align: inherit;');A5.u.css.setSelector('.A5ControlBarVert','display: table; height: 100%;');A5.u.css.setSelector('.A5ControlBarVert .A5ControlBarLine','display: table-cell; vertical-align: middle;');A5.u.css.setSelector('.A5ControlBarVert .A5ControlBarLineCust','display: table-cell;');A5.u.css.setSelector('.A5ControlBarVert .A5ControlBarLineBefore','display: table-cell; vertical-align: top;');A5.u.css.setSelector('.A5ControlBarVert .A5ControlBarLineAfter','display: table-cell; vertical-align: bottom;');A5.u.css.setSelector('.A5ControlBarVert .A5ControlBarLineContentBefore','position: absolute; top: 0px;');A5.u.css.setSelector('.A5ControlBarVert .A5ControlBarLineContentAfter','position: absolute; bottom: 0px;');A5.u.css.setSelector('.A5ControlBarVert .A5ControlBarLineBefore .A5ControlBarLineContentBefore, .A5ControlBarVert .A5ControlBarLineAfter .A5ControlBarLineContentAfter','position: static;');A5.u.css.setSelector('.A5ControlBarCollapse .A5ControlBarVert .A5ControlBarLine > div','position: static; display: block;');A5.u.css.setSelector('.A5ControlBarCollapse .A5ControlBarVert .A5ControlBarLine','vertical-align: top;');A5.controlBar._.initDone=true;}}}}
 A5.ControlBar=Class.create({initialize:function(contId,data,settings){if(typeof settings=='undefined'){settings=data;data=null;}
@@ -339,10 +351,10 @@ var tProp=A5.u.css.properties.transform;var tPropDOM=A5.u.css.properties.transfo
 if(this.onDraw.constructor==Function)this.onDraw.call(this,'main',cEle);if(this._d.shown){if(this._d.current.s.name.substr(0,7)=='layout:'){var dEle=$(this.contId+'.DISCLOSURE.A5CONTROLBARDYNAMIC');if(this.onBeforeDraw.constructor==Function)this.onBeforeDraw.call(this,'disclosure');var layoutEdge=this._d.current.layoutEdge;var cn='class="'+this[layoutEdge+'ClassName']+'" ';var hCSS='';if(layoutEdge=='left'||layoutEdge=='right')hCSS='height: 100%;';if(hCSS=='')dEle.children[0].style.height='';else dEle.children[0].style.height='100%';dEle.children[0].innerHTML='<div '+cn+' style="'+hCSS+'">'+A5.u.template.expand(this.data,{template:this._cdl._t[layoutEdge]},{state:this.state},this)+'</div>';if(this.onDraw.constructor==Function)this.onDraw.call(this,'disclosure',dEle);}}},action:function(action){if(this.actions[action]){var data=typeof arguments[1]!='undefined'?arguments[1]:false;this.actions[action].call(this,data);}else console.log('ERROR - control bar action "'+action+'" not found');},focus:function(name){var iObj=this.items[name];if(iObj){var id=this.contId+'.'+name;var ele=$(id);if(iObj.type=='edit'){if(ele){var part='disclosure';while(ele!=document.body){if(ele.id==this.contId){part='main';break;}
 ele=ele.parentNode;}
 if(this.state.edit.shown){var tEle=$(this._e.current.id);tEle.innerHTML=this._e.ele.value;tEle.style.visibility='';}
-this._e.current={item:iObj,id:id,p:part};if(part=='main')var eEle=this._e.ele;else var eEle=this._e.dEle;eEle.className=iObj.settings.className;$ss(eEle,iObj.settings.style+'; position: absolute; top: 0px; left: 0px; margin: 0px; display: none; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;');var ev=A5.u.object.get(this.data,iObj.bind.value);eEle.value=ev;this._editPos();eEle.focus();eEle.select();this.state.edit.shown=true;this.state.edit.item=name;this.state.edit.part=part;this.state.edit.path=iObj.bind.value;}}else ele.focus();}},showDisclosure:function(s){if(this._d.shown){this._d.next=s;this.hideDisclosure();}else{var ele=typeof arguments[1]!='undefined'?arguments[1]:false;ele=$(ele);$u.o.assign(s,{name:'',type:'extend',size:false,animation:true,autoHide:true,className:'',coverClassName:this.disclosure.coverClassName},true);var type=s.type;if(type.indexOf('element')!=-1&&!ele){type=type.split('-').shift();if(type=='expand')type='expand-after';}
+this._e.current={item:iObj,id:id,p:part};if(part=='main')var eEle=this._e.ele;else var eEle=this._e.dEle;eEle.className=iObj.settings.className;$ss(eEle,iObj.settings.style+'; position: absolute; top: 0px; left: 0px; margin: 0px; display: none; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;');var ev=A5.u.object.get(this.data,iObj.bind.value);eEle.value=ev;this._editPos();eEle.focus();eEle.select();this.state.edit.shown=true;this.state.edit.item=name;this.state.edit.part=part;this.state.edit.path=iObj.bind.value;}}else ele.focus();}},showDisclosure:function(s){if(this._d.shown){this._d.next=s;this.hideDisclosure();}else{var ele=typeof arguments[1]!='undefined'?arguments[1]:false;ele=$(ele);$u.o.assign(s,{name:'',type:'extend',size:false,margin:{top:0,left:0,right:0,bottom:0},animation:true,autoHide:true,className:'',coverClassName:this.disclosure.coverClassName},true);if(typeof s.margin.top!='number')s.margin.top=A5.u.convertUnits(s.margin.top.toString(),'px');if(typeof s.margin.left!='number')s.margin.left=A5.u.convertUnits(s.margin.left.toString(),'px');if(typeof s.margin.right!='number')s.margin.right=A5.u.convertUnits(s.margin.right.toString(),'px');if(typeof s.margin.bottom!='number')s.margin.bottom=A5.u.convertUnits(s.margin.bottom.toString(),'px');var type=s.type;if(type.indexOf('element')!=-1&&!ele){type=type.split('-').shift();if(type=='expand')type='expand-after';}
 this._cdl=false;var dd=false;if(s.name.substr(0,7)=='layout:'){var dEle=$(this.contId+'.DISCLOSURE.A5CONTROLBARDYNAMIC');this._cdl=this.layouts[s.name.substr(7)];if(!this._cdl)return false;if(s.className=='')s.className=this.disclosure.defaults.className;}else{dd=this.disclosures[s.name];if(!dd)return false;var dEle=$(this.contId+'.DISCLOSURE.'+s.name);if(s.className=='')s.className=dd.className;}
 dEle.className=s.className;dEle.style.top='';dEle.style.bottom='';dEle.style.left='';dEle.style.right='';dEle.style.width='';dEle.style.height='';if(type=='explicit'){if(s.rectangle.constructor==Function)var rect=s.rectangle.call(this,s);else var rect=s.rectangle;}else var rect=this._getDisclosureRect(type,ele);var layoutEdge=this.edge;if(s.name.substr(0,7)=='layout:'){if(type=='outside-before'||type=='outside-after'||type.split('-').shift()=='screen')layoutEdge=rect.edge;this._compileTemplate(this._cdl,layoutEdge);if(this.onBeforeDraw.constructor==Function)this.onBeforeDraw.call(this,'disclosure');var cn='class="'+this[layoutEdge+'ClassName']+'" ';var hCSS='';if(layoutEdge=='left'||layoutEdge=='right')hCSS='height: 100%;';if(hCSS=='')dEle.children[0].style.height='';else dEle.children[0].style.height='100%';dEle.children[0].innerHTML='<div '+cn+' style="'+hCSS+'">'+A5.u.template.expand(this.data,{template:this._cdl._t[layoutEdge]},{state:this.state},this)+'</div>';if(this.onDraw.constructor==Function)this.onDraw.call(this,'disclosure',dEle);}
-var dcEle=this._d.ele.children[0];if(typeof rect.className!='undefined')dcEle.className=rect.className;else dcEle.className='';dcEle.style.top=rect.top+'px';dcEle.style.bottom=rect.bottom+'px';dcEle.style.left=rect.left+'px';dcEle.style.right=rect.right+'px';var setMargin=false;dEle.style[rect.edge]='0px';dEle.style.marginLeft='';dEle.style.marginTop='';if(rect.fill=='both'||s.size=='fill'){dEle.style.top='0px';dEle.style.bottom='0px';dEle.style.left='0px';dEle.style.right='0px';}else if(rect.fill=='width'){dEle.style.left='0px';dEle.style.right='0px';}else if(rect.fill=='height'){dEle.style.top='0px';dEle.style.bottom='0px';}else{if(!rect.align)rect.align='middle';if(rect.align=='before'){if(rect.edge=='top'||rect.edge=='bottom')dEle.style.left='0px';else dEle.style.top='0px';}else if(rect.align=='after'){if(rect.edge=='top'||rect.edge=='bottom')dEle.style.right='0px';else dEle.style.bottom='0px';}else{if(rect.edge=='top'||rect.edge=='bottom')dEle.style.left='50%';else dEle.style.top='50%';setMargin=true;}}
+var dcEle=this._d.ele.children[0];if(typeof rect.className!='undefined')dcEle.className=rect.className;else dcEle.className='';dcEle.style.top=(rect.top+s.margin.top)+'px';dcEle.style.bottom=(rect.bottom+s.margin.bottom)+'px';dcEle.style.left=(rect.left+s.margin.left)+'px';dcEle.style.right=(rect.right+s.margin.right)+'px';var setMargin=false;dEle.style[rect.edge]='0px';dEle.style.marginLeft='';dEle.style.marginTop='';if(rect.fill=='both'||s.size=='fill'){dEle.style.top='0px';dEle.style.bottom='0px';dEle.style.left='0px';dEle.style.right='0px';}else if(rect.fill=='width'){dEle.style.left='0px';dEle.style.right='0px';}else if(rect.fill=='height'){dEle.style.top='0px';dEle.style.bottom='0px';}else{if(!rect.align)rect.align='middle';if(rect.align=='before'){if(rect.edge=='top'||rect.edge=='bottom')dEle.style.left='0px';else dEle.style.top='0px';}else if(rect.align=='after'){if(rect.edge=='top'||rect.edge=='bottom')dEle.style.right='0px';else dEle.style.bottom='0px';}else{if(rect.edge=='top'||rect.edge=='bottom')dEle.style.left='50%';else dEle.style.top='50%';setMargin=true;}}
 var startTrans='';if(rect.edge=='top'){startTrans=A5.u.css.transform2D('0px','-100%');if(s.size&&s.size!='fill'&&type!='cover'){dEle.style.height=s.size;}}else if(rect.edge=='bottom'){startTrans=A5.u.css.transform2D('0px','100%');if(s.size&&s.size!='fill'&&type!='cover'){dEle.style.height=s.size;}}else if(rect.edge=='left'){startTrans=A5.u.css.transform2D('-100%','0px');if(s.size&&s.size!='fill'&&type!='cover'){dEle.style.width=s.size;}}else if(rect.edge=='right'){startTrans=A5.u.css.transform2D('100%','0px');if(s.size&&s.size!='fill'&&type!='cover'){dEle.style.width=s.size;}}
 dEle.style.display='';if(type.split('-').shift()=='expand'&&!s.size)this._d.ele.className=s.coverClassName+' A5ControlBarCollapse';else this._d.ele.className=s.coverClassName;var dur=this.disclosure.animation.duration;var tween=this.disclosure.animation.tween;var completeDelay=false;if(s.animation){if(typeof s.animation=='object'){if(s.animation.duration)dur=s.animation.duration;if(s.animation.tween)tween=s.animation.tween;}
 var cssDOMProp=A5.u.css.properties.transformDOM;var cssAnimProp=A5.u.css.properties.transitionDOM;dEle.style[cssDOMProp]=startTrans;dEle.style[cssAnimProp]='';this._d.ele.style.display='';dEle.offsetHeight;dEle.style[cssAnimProp]=A5.u.css.properties.transform+' '+dur+'ms '+tween;dEle.style[cssDOMProp]=A5.u.css.transform2D('0px','0px');completeDelay=true;}else{var cssDOMProp=A5.u.css.properties.transformDOM;var cssAnimProp=A5.u.css.properties.transitionDOM;dEle.style[cssDOMProp]=A5.u.css.transform2D('0px','0px');dEle.style[cssAnimProp]='';this._d.ele.style.display='';dEle.offsetHeight;dEle.style[cssAnimProp]=A5.u.css.properties.transform+' '+dur+'ms '+tween;}
@@ -351,8 +363,8 @@ var eleId=false
 if(ele)eleId=ele.id;this._d.current={s:s,eleId:eleId,dEle:dEle,trans:startTrans,dur:dur,layoutEdge:layoutEdge,internalShow:false};this._d.next=false;this._d.shown=true;var dbcEle=$(this.contId+'.DISCLOSURE.CLOSE');dbcEle.style.display='none';if(this._d.internalShow&&ele){this._d.current.internalShow=true;var eBRect=ele.getBoundingClientRect();var tOff=0;var lOff=0;if(this.disclosure.container!=''){var cEle=$(this.disclosure.container);if(cEle){var ceBRect=cEle.getBoundingClientRect();tOff=ceBRect.top;lOff=ceBRect.left;}}
 dbcEle.style.top=(eBRect.top-tOff)+'px';dbcEle.style.left=(eBRect.left-lOff)+'px';dbcEle.style.width=eBRect.width+'px';dbcEle.style.height=eBRect.height+'px';dbcEle.style.display='block';}
 this.state.disclosure.shown=true;this.state.disclosure.name=s.name;this.state.disclosure.type=type;this.state.disclosure.edge=layoutEdge;if(dd){$e.execute(dEle,'a5resize');if(dd.onShow.constructor==Function)dd.onShow.call(this,dEle);if(dd.onSize.constructor==Function)dd.onSize.call(this,dEle);if(completeDelay){var ci=this;setTimeout(function(){ci._showDisclosureComplete();delete ci;},dur+10);}else this._showDisclosureComplete();}}},hideDisclosure:function(){if(this._d.shown){var anim=typeof arguments[0]!='undefined'?arguments[0]:true;var dur=0;if(anim){this._d.current.dEle.style[A5.u.css.properties.transformDOM]=this._d.current.trans;dur=this._d.current.dur;}
-clearTimeout(this._hdcTO);var ci=this;this._hdcTO=setTimeout(function(){ci._hideDisclosureComplete();delete ci;},dur);}},resizeDisclosure:function(){if(this._d.shown){var type=this._d.current.s.type
-if(type=='explicit'){if(this._d.current.s.rectangle.constructor==Function)var rect=this._d.current.s.rectangle.call(this,this._d.current.s);else var rect=this._d.current.s.rectangle;}else var rect=this._getDisclosureRect(type,$(this._d.current.eleId));var dcEle=this._d.ele.children[0];dcEle.style.top=rect.top+'px';dcEle.style.bottom=rect.bottom+'px';dcEle.style.left=rect.left+'px';dcEle.style.right=rect.right+'px';var dd=this.disclosures[this._d.current.s.name];if(dd){$e.execute(this._d.current.dEle,'a5resize');if(dd.onSize.constructor==Function)dd.onSize.call(this,this._d.current.dEle);}
+clearTimeout(this._hdcTO);var ci=this;this._hdcTO=setTimeout(function(){ci._hideDisclosureComplete();delete ci;},dur);}},resizeDisclosure:function(){if(this._d.shown){var s=this._d.current.s;var type=s.type
+if(type=='explicit'){if(s.rectangle.constructor==Function)var rect=s.rectangle.call(this,s);else var rect=s.rectangle;}else var rect=this._getDisclosureRect(type,$(this._d.current.eleId));var dcEle=this._d.ele.children[0];dcEle.style.top=(rect.top+s.margin.top)+'px';dcEle.style.bottom=(rect.bottom+s.margin.bottom)+'px';dcEle.style.left=(rect.left+s.margin.left)+'px';dcEle.style.right=(rect.right+s.margin.right)+'px';var dd=this.disclosures[s.name];if(dd){$e.execute(this._d.current.dEle,'a5resize');if(dd.onSize.constructor==Function)dd.onSize.call(this,this._d.current.dEle);}
 if(this._d.current.internalShow){var dbcEle=$(this.contId+'.DISCLOSURE.CLOSE');var eBRect=$(this._d.current.eleId).getBoundingClientRect();var tOff=0;var lOff=0;if(this.disclosure.container!=''){var cEle=$(this.disclosure.container);if(cEle){var ceBRect=cEle.getBoundingClientRect();tOff=ceBRect.top;lOff=ceBRect.left;}}
 dbcEle.style.top=(eBRect.top-tOff)+'px';dbcEle.style.left=(eBRect.left-lOff)+'px';dbcEle.style.width=eBRect.width+'px';dbcEle.style.height=eBRect.height+'px';}}},_getDisclosureRect:function(type,ele){var rect={top:0,left:0,right:0,bottom:0,edge:this.edge,fill:'',className:''};var cBRect=$(this.contId).getBoundingClientRect();var eBRect=false;if(ele)eBRect=ele.getBoundingClientRect();if(this.disclosure.container!=''){var tBRect=$(this.disclosure.container).getBoundingClientRect();var leftOff=tBRect.left;var topOff=tBRect.top;var docWidth=tBRect.width;var docHeight=tBRect.height;}else{var leftOff=0;var topOff=0;var docWidth=document.documentElement.clientWidth;var docHeight=document.documentElement.clientHeight;}
 if(type.split('-').shift()=='expand'){rect.top=cBRect.top-topOff;rect.bottom=docHeight-cBRect.bottom+topOff;rect.left=cBRect.left-leftOff;rect.right=docWidth-cBRect.right+leftOff;if(this.edge=='top'||this.edge=='bottom'){rect.fill='height';if(type=='expand-before'){rect.edge='left';}else if(type=='expand-after'){rect.edge='right';}else if(type=='expand-element'||type=='expand-element-cover'){if(eBRect.left>(cBRect.left+(cBRect.width/2))){rect.edge='right';if(type=='expand-element')rect.right=(docWidth-eBRect.left+leftOff);else rect.right=(docWidth-eBRect.right+leftOff);}else{rect.edge='left';if(type=='expand-element')rect.left=eBRect.right-leftOff;else rect.left=eBRect.left-leftOff;}}}else{rect.fill='width';if(type=='expand-before'){rect.edge='top';}else if(type=='expand-after'){rect.edge='bottom';}else if(type=='expand-element'||type=='expand-element-cover'){if(eBRect.top>(cBRect.top+(cBRect.height/2))){rect.edge='bottom';if(type=='expand-element')rect.bottom=(docHeight-eBRect.top+topOff);else rect.bottom=(docHeight-eBRect.bottom+topOff);}else{rect.edge='top';if(type=='expand-element')rect.top=eBRect.bottom-topOff;else rect.top=eBRect.top-topOff;}}}
@@ -366,7 +378,7 @@ this.refresh();}},_refreshAnimComplete:function(){this._m.anim=false;if(this._m.
 clearTimeout(this._rdTO);this._rdTO=setTimeout(function(){ci.resizeDisclosure();delete ci},50);}
 if(this._e.shown){var ci=this
 clearTimeout(this._reTO);this._reTO=setTimeout(function(){ci._editPos();delete ci},50);}},_disClick:function(e,ci){if(ci._d.current){var cEle=$(ci.contId);var coor=$e.getCoors(e);var ele=document.elementFromPoint(coor.clientX,coor.clientY);if(!ele)return true;while(ele!=cEle&&ele!=document.body){if(ele.hasAttribute('a5-action'))ci.action(ele.getAttribute('a5-action'),{element:ele,event:e});else if(ele==ci._d.current.dEle)return true;ele=ele.parentNode;}
-if(ci._d.current){if(!ci._d.current.s.autoHide)return true;ci.hideDisclosure();}}},_disCloseClick:function(e,ci){ci.hideDisclosure();},_editKeyup:function(e,ci){if(ci._e.current.item.update!='done')ci.update(ci.state.edit.path,this.value);A5.controlBar.items.edit.event.call(ci,'keyup',ci.state.edit.item,this.value,ci.items[ci.state.edit.item],this,e);var keyCode=e.charCode||e.keyCode;if(keyCode==13)this.blur();},_editBlur:function(e,ci){A5.controlBar.items.edit.event.call(ci,'done',ci.state.edit.item,this.value,ci.items[ci.state.edit.item],this,e);this.style.display='none';ci.state.edit.shown=false;ci.state.edit.item='';ci.state.edit.part='';ci.update(ci.state.edit.path,this.value);},_editPos:function(){var tEle=$(this._e.current.id);if(tEle){if(this._e.current.p=='main')var ele=this._e.ele;else var ele=this._e.dEle;var eBRect=tEle.getBoundingClientRect();var peBRect=ele.parentNode.getBoundingClientRect();ele.style.top=(eBRect.top-peBRect.top)+'px';ele.style.left=(eBRect.left-peBRect.left)+'px';ele.style.width=eBRect.width+'px';ele.style.height=eBRect.height+'px';ele.style.display='';tEle.style.visibility='hidden';this._e.shown=true;}else{this._e.ele.style.display='none';this._e.dEle.style.display='none';this._e.shown=false;}},_click:function(e,ci){if(A5.u.drag._sDif>=$e.abstractEvents.click.scrollMax)return true;var id='';var r=ci._aEle(e);if(r&&ci._startItem){if(ci._startItem.i==r.i){if($ga(r.ele,'a5-disabled')!='true'&&!r.ele.disabled){id=r.ele.id;var iObj=ci.items[r.i];if(iObj){var dShown=ci._d.shown;if(iObj.disclosure){if(iObj.autoHideDisclosure!='auto')ci._d.internalShow=true;ci.showDisclosure(iObj.disclosure,r.ele);ci._d.internalShow=false;}else if(iObj.type=='edit'){if(ci.state.edit.shown){var tEle=$(ci._e.current.id);tEle.innerHTML=ci._e.ele.value;tEle.style.visibility='';}
+if(ci._d.current){if(!ci._d.current.s.autoHide)return true;ci.hideDisclosure();}}},_disCloseClick:function(e,ci){ci.hideDisclosure();},_editKeyup:function(e,ci){if(ci._e.current.item.update!='done')ci.update(ci.state.edit.path,this.value);A5.controlBar.items.edit.event.call(ci,'keyup',ci.state.edit.item,this.value,ci.items[ci.state.edit.item],this,e);var keyCode=e.charCode||e.keyCode;if(keyCode==13)this.blur();},_editBlur:function(e,ci){if(document.activeElement!=ci._e.ele&&document.activeElement!=ci._e.dEle){A5.controlBar.items.edit.event.call(ci,'done',ci.state.edit.item,this.value,ci.items[ci.state.edit.item],this,e);this.style.display='none';ci.state.edit.shown=false;ci.state.edit.item='';ci.state.edit.part='';ci.update(ci.state.edit.path,this.value);}},_editPos:function(){var tEle=$(this._e.current.id);if(tEle){if(this._e.current.p=='main')var ele=this._e.ele;else var ele=this._e.dEle;var eBRect=tEle.getBoundingClientRect();var peBRect=ele.parentNode.getBoundingClientRect();ele.style.top=(eBRect.top-peBRect.top)+'px';ele.style.left=(eBRect.left-peBRect.left)+'px';ele.style.width=eBRect.width+'px';ele.style.height=eBRect.height+'px';ele.style.display='';tEle.style.visibility='hidden';this._e.shown=true;}else{this._e.ele.style.display='none';this._e.dEle.style.display='none';this._e.shown=false;}},_click:function(e,ci){if(A5.u.drag._sDif>=$e.abstractEvents.click.scrollMax)return true;var id='';var r=ci._aEle(e);if(r&&ci._startItem){if(ci._startItem.i==r.i){if($ga(r.ele,'a5-disabled')!='true'&&!r.ele.disabled){id=r.ele.id;var iObj=ci.items[r.i];if(iObj){var dShown=ci._d.shown;if(iObj.disclosure){if(iObj.autoHideDisclosure!='auto')ci._d.internalShow=true;ci.showDisclosure(iObj.disclosure,r.ele);ci._d.internalShow=false;}else if(iObj.type=='edit'){if(ci.state.edit.shown){var tEle=$(ci._e.current.id);tEle.innerHTML=ci._e.ele.value;tEle.style.visibility='';}
 ci._e.current={item:iObj,id:id,p:r.p};if(r.p=='main')var eEle=ci._e.ele;else var eEle=ci._e.dEle;eEle.className=iObj.settings.className;$ss(eEle,iObj.settings.style+'; position: absolute; top: 0px; left: 0px; margin: 0px; display: none; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;');var ev=A5.u.object.get(ci.data,iObj.bind.value);eEle.value=ev;ci._editPos();eEle.focus();eEle.select();ci.state.edit.shown=true;ci.state.edit.item=r.i;ci.state.edit.part=r.p;ci.state.edit.path=iObj.bind.value;}
 var iTObj=A5.controlBar.items[iObj.type];if(iTObj){if(iTObj.event)iTObj.event.call(ci,'click',r.i,r.v,iObj,r.ele,e);}
 if(dShown&&!ci._d.next&&ci._d.current){if(iObj.autoHideDisclosure){var hide=false;if(iObj.autoHideDisclosure=='always')hide=true;else if(iObj.autoHideDisclosure!='never'&&ci._d.current.s.autoHide)hide=true;if(hide)ci.hideDisclosure();}}}}}}
@@ -511,7 +523,7 @@ if(typeof DLG1_DlgObj == 'object') {
 	body: {
 		content: {
 			type: 'html',
-			src: '\t<div class="">\n\t\t<div id="DLG1_DIVCONTAINER_053e133e_d1ba_47cc_b2d1_fc115285ad4a"   ><div id=load_screen><div id=loading><div class=alinear><button type="button" class="btn-floating btn-large waves-effect waves-light pulse" style="background: #B53F51!important; border: 0px; box-sizing: border-box; position: absolute; margin: 4px;"><i class="fa fa-power-off fa-2x" style="vertical-align: middle; border: none;"></i></button><div class="preloader-wrapper big active">    <div class="spinner-layer spinner-blue-only">      <div class="circle-clipper left">        <div class="circle"></div>      </div><div class="gap-patch">        <div class="circle"></div>      </div><div class="circle-clipper right">        <div class="circle"></div>      </div>     </div>   </div></div></div></div></div>\n\t</div><br  style="clear:both; " />\n\t\t\n<div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
+			src: '\t<div class="">\n\t\t<div id="DLG1_DIVCONTAINER_053e133e_d1ba_47cc_b2d1_fc115285ad4a"   ><div id=load_screen><div id=loading><div class=alinear><button onclick="emergencia()" type="button" class="btn-floating btn-large waves-effect waves-light pulse" style="background: #FFAA01!important; border: 0px; box-sizing: border-box; position: absolute; margin: 4px;"><i class="fa fa-power-off fa-2x" style="vertical-align: middle; border: none;"></i></button><div class="preloader-wrapper big active">    <div class="spinner-layer spinner-blue-only">      <div class="circle-clipper left">        <div class="circle"></div>      </div><div class="gap-patch">        <div class="circle"></div>      </div><div class="circle-clipper right">        <div class="circle"></div>      </div>     </div>   </div></div></div></div></div>\n\t</div><br  style="clear:both; " />\n\t\t\n<div style="clear: both; font: 0px arial; height: 0px; width: 0px;"></div>'
 		},
 		scroll: false
 	},
@@ -529,7 +541,11 @@ if(typeof DLG1_DlgObj == 'object') {
 	type: 'programmatic',
 	flow: 'ltr',
 	loopNavigate: false,
-	onPanelActivate: function() {DLG1_DlgObj.refreshClientSideComputations();},
+	onPanelActivate: function() {var panelName = this.state.activePanel;
+if(panelName == 'PNL_MAIN_LOGGED') {
+	DLG1_DlgObj._functions.runAction_053e133e_d1ba_47cc_b2d1_fc115285ad4a();;
+}
+DLG1_DlgObj.refreshClientSideComputations();},
 	onPanelActivateComplete: function() {if(this.state.activePanel == 'PNL_MAIN_LOGGED') { 
 	var pChild = DLG1_DlgObj.getChildObject('<DEFAULTALIAS>','UX');
 	if(pChild) pChild._executeEvent('onPanelActivate');
@@ -564,6 +580,7 @@ if(typeof DLG1_DlgObj == 'object') {
 	body: {
 	},
 	animation: {
+		type: 'fade',
 		duration: 400
 	}
 })
@@ -600,7 +617,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	componentGUID: '0bd63fda-5f7e-4064-a36e-7565ce54c8af',
 	columnInfo: {'TXT_USER_LOG': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_PASS_LOG': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_NAME_SIGN': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_LASTNAME_SIGN': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_PHONE_SIGN': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  },'TXT_PASS_SIGN': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }},
 	originalValues: [{
-	'TXT_USER_LOG': '',
+	'TXT_USER_LOG': '1001',
 	'TXT_PASS_LOG': '',
 	'TXT_NAME_SIGN': '',
 	'TXT_LASTNAME_SIGN': '',
@@ -608,7 +625,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	'TXT_PASS_SIGN': ''
 }],
 	defaultValues: {
-	TXT_USER_LOG: '',
+	TXT_USER_LOG: '1001',
 	TXT_PASS_LOG: '',
 	TXT_NAME_SIGN: '',
 	TXT_LASTNAME_SIGN: '',
@@ -659,16 +676,16 @@ DLG1_DlgObj._findActiveLayoutRule();
 A5.__componentObj = DLG1_DlgObj;
 DLG1_DlgObj.loadCSSFile('css/bootstrap.min.css');
 DLG1_DlgObj.loadCSSFile('css/materialize.min.css');
-DLG1_DlgObj.loadCSSFile('css/owl.carousel.min.css');
+DLG1_DlgObj.loadCSSFile('css/flickity.css');
 DLG1_DlgObj.loadCSSFile('css/CSSIcons/font-awesome/css/font-awesome.min.css');
 DLG1_DlgObj._tabObjects = [];
-A5.loadJavascript('function panel_signup(){\n\tDLG1_DlgObj.panelSetActive(\'PNL_SIGN\');\n}\nfunction panel_login(){\n\tDLG1_DlgObj.panelSetActive(\'PNL_LOG\');\n}\n;\n\n\n\n;',true);
+A5.loadJavascript('function panel_signup(){\n\tDLG1_DlgObj.panelSetActive(\'PNL_SIGN\');\n}\nfunction panel_login(){\n\tDLG1_DlgObj.panelSetActive(\'PNL_LOG\');\n}\nfunction emergencia() {\n\tDLG1_DlgObj.panelSetActive(\'PNL_LOG\');\n}\n;\n\n\n\n;',true);
 DLG1_DlgObj._functions.runAction_053e133e_d1ba_47cc_b2d1_fc115285ad4a = function() {
 		var go = new Object();
 		go.dialog2Name = 'B2C_MAIN';
 	go.type = 'dialog2';
-	go.alias = 'DLG1_B2C_MAIN_121717IASQ';
-	go.workingMessage = '<div id=load_screen><div id=loading><div class=alinear><button type="button" class="btn-floating btn-large waves-effect waves-light pulse" style="background: #B53F51!important; border: 0px; box-sizing: border-box; position: absolute; margin: 4px;"><i class="fa fa-power-off fa-2x" style="vertical-align: middle; border: none;"></i></button><div class="preloader-wrapper big active">    <div class="spinner-layer spinner-blue-only">      <div class="circle-clipper left">        <div class="circle"></div>      </div><div class="gap-patch">        <div class="circle"></div>      </div><div class="circle-clipper right">        <div class="circle"></div>      </div>     </div>   </div></div></div></div>';
+	go.alias = 'DLG1_B2C_MAIN_17517EADX';
+	go.workingMessage = '<div id=load_screen><div id=loading><div class=alinear><button onclick="emergencia()" type="button" class="btn-floating btn-large waves-effect waves-light pulse" style="background: #FFAA01!important; border: 0px; box-sizing: border-box; position: absolute; margin: 4px;"><i class="fa fa-power-off fa-2x" style="vertical-align: middle; border: none;"></i></button><div class="preloader-wrapper big active">    <div class="spinner-layer spinner-blue-only">      <div class="circle-clipper left">        <div class="circle"></div>      </div><div class="gap-patch">        <div class="circle"></div>      </div><div class="circle-clipper right">        <div class="circle"></div>      </div>     </div>   </div></div></div></div>';
 	go.flagTimer = 'F';
 	go.flagQueryEcho = 'F';
 	go.flagDebugMode = 'F';
@@ -693,9 +710,9 @@ go.dialog2Div = panelCardId;
 if( !DLG1_DlgObj._getOnlineStatus()) runMethod = 'precomputed';
 if(DLG1_DlgObj._embeddedMode) runMethod = 'ajax';
 if(DLG1_DlgObj._staticHTMLMode) runMethod = 'precomputed';
-if(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_0df0f948953f4a04aa0636c3b3756022_B2C_MAIN'] == 'function') { 
-	//PRECOMPUTED_UX_COMPONENT: {functionName: 'PRECOMPUTEDUX_0df0f948953f4a04aa0636c3b3756022_B2C_MAIN', uxname: 'B2C_MAIN', alias: 'DLG1_B2C_MAIN_121717IASQ'}
-	var jsToRun = PRECOMPUTEDUX_0df0f948953f4a04aa0636c3b3756022_B2C_MAIN(go);
+if(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_3856dddb943c4489af517fc56c7988c8_B2C_MAIN'] == 'function') { 
+	//PRECOMPUTED_UX_COMPONENT: {functionName: 'PRECOMPUTEDUX_3856dddb943c4489af517fc56c7988c8_B2C_MAIN', uxname: 'B2C_MAIN', alias: 'DLG1_B2C_MAIN_17517EADX'}
+	var jsToRun = PRECOMPUTEDUX_3856dddb943c4489af517fc56c7988c8_B2C_MAIN(go);
 	eval(jsToRun);
 	if(typeof go.onLoadCompleteJavascript != 'undefined') eval(go.onLoadCompleteJavascript);
 } else {
@@ -706,7 +723,7 @@ if(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_0df0f94895
 DLG1_DlgObj.lookups = {
 };
 DLG1_DlgObj.setStateInfo({
-	"__dialogGuid": "0167a46e-7935-4879-8186-94de3a7733c5",
+	"__dialogGuid": "e6260c6c-f134-40a6-b653-2ec7fa9698c3",
 	"argumentsBoundToCotrols": "",
 	"__sgr": "",
 	"__dtfmt": "MM/dd/yyyy",
@@ -783,9 +800,10 @@ DLG1_DlgObj._functions.calcOrientation = function() {
 	A5.flags.cordovaLoaded = true;
 	try {
 		document.addEventListener('deviceready', function() { 
+			DLG1_DlgObj._cordovaReady = true;
+			//alert('fire on cordova ready 2')
 			DLG1_DlgObj._executeEvent('onCordovaReady',{});
 			DLG1_DlgObj._executeEvent('onPhoneGapReady',{});
-			DLG1_DlgObj._cordovaReady = true;
 			navigator.geolocation.getAccuratePosition = function(geolocationSuccess, geolocationError, options) {
 	var _lastCheckedPosition = null;
 	var _locationEventCount = 0;
@@ -879,8 +897,19 @@ DLG1_DlgObj._ssdecimal = ',';;
 $u.decimal = '.';
 $u.comma = ',';
 ;
+;
+;
+window.onerror = function(msg,source,line,column,err) { 
+	var _stack = '';
+	if(typeof err != 'undefined' && typeof err != null && typeof err.stack != 'undefined') _stack = err.stack;
+	var message = 'Message: ' + msg	+ '\nSource: ' + source + '\nLine: : ' + line + '\nColumn: ' + column + '\n\nStack:\n ' + _stack;
+	alert(message);
+	console.log(message);
+	DLG1_DlgObj.__lastError = message;
+};
+
 $e.add('DLG1.V.R1.BUTTON_1',A5.d.evnts.click,function(e) {
-DLG1_DlgObj.panelSetActive('PNL_MAIN_LOGGED',true);
+DLG1_DlgObj.ajaxCallback('','','UserLogged','','',{deviceOfflineFunction: function() {   }});
 },this,false,'DLG1.V.R1.BUTTON_1');
 
 
@@ -934,7 +963,6 @@ DLG1_DlgObj.initialized = true;
 
 
 
-DLG1_DlgObj._functions.runAction_053e133e_d1ba_47cc_b2d1_fc115285ad4a();
 
 
 
@@ -947,11 +975,24 @@ setTimeout(function() {
 	var _flagPGApp = false;
 	if(typeof _phoneGapSettings == 'function') { 
 		_flagPGApp = true;
-	}
+		/*
+		if(typeof cordova == 'object') {
+			DLG1_DlgObj._cordovaReady = true;
+		} else { 
+			DLG1_DlgObj._cordovaReady = false;
+		};
+		*/
+	};
+	
+	
+	
+	//alert('is a pg app: ' + _flagPGApp + '  _cordovaReady: ' + DLG1_DlgObj._cordovaReady );
 	if(!_flagPGApp) {
 		DLG1_DlgObj._restoreFromLocalStorage();
 	} else { 
+		
 		//phonegap app, but phonegap may not yet be loaded
+		//alert('register the _restoreFormLocalStorage to fire when phonegap is ready');
 		
 		DLG1_DlgObj._delayTillPhoneGapReady(DLG1_DlgObj._restoreFromLocalStorage,DLG1_DlgObj);
 	}

@@ -1,6 +1,6 @@
 function _phoneGapSettings() { 
  return {
-    "appId": "com.yourCompany.yourApp",
+    "appId": "com.nubison.wootb2b",
     "preferences": {
         "permissions": "",
         "orientation": "default",
